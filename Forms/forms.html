@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Database</title>
+</head>
+<body>
+    <h2>Search Database</h2>
+
+    <h3>Search by BWV number:</h3>
+    <form action="PHP/bwv_form.php" method="GET">
+        <label for="bwv_number">BWV Number:</label><br>
+        <input type="text" id="bwv_number" name="bwv_number" pattern="BWV [0-9]{1,4}" title="Please enter in the format 'BWV [X]', where X is a number between 0 and 9999." required><br><br>
+        <input type="submit" value="Search">
+    </form>
+
+    <h3>Search by Instrument:</h3>
+    <form action="PHP/instrument_form.php" method="GET">
+        <label for="instrument">Instrument:</label><br>
+        <select id="instrument" name="instrument">
+            <option value="Piano">Piano</option>
+            <option value="Harpsichord">Harpsichord</option>
+            <option value="Violincello">Violincello</option>
+            <option value="Violin">Violin</option>
+            <option value="Oboe">Oboe</option>
+            <option value="Orchestra">Orchestra</option>
+            <option value="Choir">Choir</option>
+            <option value="Vocal">Vocal</option>
+        </select><br><br>
+        <input type="submit" value="Search">
+    </form>
+
+</body>
+</html>
